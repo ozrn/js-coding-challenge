@@ -11,3 +11,7 @@ Example output: "HELLO!"
 Example input: "I'm almost out of coffee"
 Example output: "I'M 😱 ALMOST 😱 OUT 😱 OF 😱 COFFEE!"
 */
+
+function panic(str) {
+  return str.split(" "); // the split method converts a string to an array!!
+}
