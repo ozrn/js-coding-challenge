@@ -13,5 +13,5 @@ Example output: "I'M 😱 ALMOST 😱 OUT 😱 OF 😱 COFFEE!"
 */
 
 function panic(str) {
-  return str.split(" "); // the split method converts a string to an array!!
+  return str.split(" ").join(" 😱 "); // the split method converts a string to an array!! // the join method returns a new string by concatenating all of the elements in an array, separated by commas or a specified separator string !!
 }
