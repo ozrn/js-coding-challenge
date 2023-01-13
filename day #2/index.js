@@ -14,5 +14,8 @@ Hint: endsWith and slice
 */
 function whisper(text) {
   const whisperSound = "shh";
-  const newText = whisperSound.concat(" ", text).toLowerCase();
+  const newText = whisperSound.concat(" ", text);
+  return newText.endsWith("!")
+    ? newText.slice(0, -1).toLowerCase()
+    : newText.toLowerCase();
 }
