@@ -12,3 +12,7 @@ output: "shh... the kittens are sleeping"
 
 Hint: endsWith and slice
 */
+function whisper(text) {
+  const whisperSound = "shh";
+  const newText = whisperSound.concat(" ", text).toLowerCase();
+}
