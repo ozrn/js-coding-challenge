@@ -7,9 +7,13 @@ Example output: "I'M So hApPy iT'S MoNdAy"
 */
 
 function altCaps(str) {
+  let newStr = "";
   for (let i = 0; i < str.length; i++) {
     if (i % 2 === 0) {
-      console.log(str[i].toUpperCase());
+      newStr += str[i].toUpperCase();
+    } else {
+      newStr += str[i];
     }
   }
+  return newStr;
 }
