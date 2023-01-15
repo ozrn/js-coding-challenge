@@ -24,7 +24,12 @@ Now write a function that capitalizes every word in a sentence.
 How can you reuse the function you just wrote? 
 */
 
-function toTitleCase(str) {}
+function toTitleCase(str) {
+  // split sentence into an array of words
+  const newWordsArray = str.split(" ");
+  // loop through the arrays of words and call capitalizeWord func on each word
+  return newWordsArray.map((newWord) => capitalizeWord(newWord));
+}
 
 // Test your functions
 console.log(capitalizeWord("pumpkin"));
