@@ -19,8 +19,14 @@ Your function's output should look something like this:
 5 - $100,000 bonus!
  */
 
-function awardBonuses() {
- 
+function awardBonuses(id) {
+  return id % 15 === 0
+    ? `${id} - JACKPOT! 1 Million and a Yacht!`
+    : id % 5 === 0
+    ? `${id} - $100,000 bonus!`
+    : id % 3 === 0
+    ? `${id} - Vacation!`
+    : `${id} - :(`;
 }
 
 awardBonuses();
