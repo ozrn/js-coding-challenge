@@ -38,7 +38,11 @@ Example output: "elephant"
 
 function emojifyWord(word) {
   const wordRegex = /\:\w+\:/g; // it checks if the word starts and ends with a colon!
-  return wordRegex.test(word);
+  if (!wordRegex.test(word)) {
+    return word;
+  }
+  const slicedWord = word.slice(1, -1);
+  return emojis[slicedWord] ? emojis[slicedWord] : slicedWord;
 }
 
 /* 2. Write a function to find any emoji shortcodes in a phrase.
