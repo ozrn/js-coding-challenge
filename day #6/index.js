@@ -58,7 +58,9 @@ Example output: "I 💜 my elephant"
 */
 
 function emojifyPhrase(phrase) {
-  return;
+  const phraseArr = phrase.split(" ");
+  const mappedPhraseArr = phraseArr.map((word) => emojifyWord(word));
+  return mappedPhraseArr.join(" ");
 }
 
 // console.log(emojifyWord(":heart:"));
