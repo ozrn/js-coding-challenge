@@ -15,7 +15,12 @@ Example output: false
 
 */
 
-function isAnagram(str1, str2) {}
+function isAnagram(str1, str2) {
+  return str1.length === str2.length &&
+    str1.split("").sort().join("") === str2.split("").sort().join("")
+    ? true
+    : false;
+}
 
 console.log(isAnagram("allergy", "gallery"));
 console.log(isAnagram("treasure", "measure"));
