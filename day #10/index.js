@@ -14,7 +14,9 @@ Example output: "abc12"
 const password = "9338dsabbbadjdjdj2sdfdfdf282ff8fdsd888ss8cfgfg332q23";
 
 function removeDupeChars(pass) {
+    const newPass = [...new Set(pass)] // new Set; lets us store unique values of any type, whether primitive values or object references
+    return newPass.join('');
+
 
 }
-
-console.log(removeDupeChars(password));
+console.log(removeDupeChars("9338dsabbbadjdjdj2sdfdfdf282ff8fdsd888ss8cfgfg332q23"));
