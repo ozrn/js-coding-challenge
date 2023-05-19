@@ -15,7 +15,21 @@ lowercase t and a capital T should be considered the same character).
 */
 
 function countChars(str) {
+    const obj = {}; //a new empty object to hold the letter counts
+    const name = str.toLowerCase().split(" ").join("");
+    // loop through the letters of the string
+    for (let i = 0; i < name.length; i++) {
+        // if the character is not in the obj, add it, give it a value of 1
+        if (!obj[name[i]]) {
+            obj[name[i]] = 1;
+        } else {
+            // if the character is already in the object, increment that char's value
+            obj[name[i]] += 1;
+        }
+    }
+    return obj;
 
 }
+
 
 console.log(countChars("Peggy Porth"));
