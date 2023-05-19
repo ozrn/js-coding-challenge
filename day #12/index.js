@@ -24,8 +24,11 @@ const eggScrambleRecipe = [
     "🌶️ hot sauce"
 ]
 
-function removeDupesFromArray(recipe) {
-
+const removeDupesFromArray = recipe => {
+    const newRecipe = new Set(recipe); // removes duplicates!!
+    const newRecipeArr = Array.from(newRecipe); // converts an object to an array
+    return newRecipeArr;
 }
+
 
 console.log(removeDupesFromArray(eggScrambleRecipe));
